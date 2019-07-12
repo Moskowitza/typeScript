@@ -83,3 +83,10 @@ you can run tsc from a package.json script
 You can use the typescript compiler instead of parcel. This will create new javascript files in your src directory.
 
 TODO: I'm not sure how to handle the module imports, tsc did not handle this out of the box and there appear to be many options in the handbook.
+
+## Webpack
+
+Directions here: `https://webpack.js.org/guides/typescript/`
+`npm install --save-dev typescript ts-loader webpack webpack-cli`
+you will need a _webpack config file and tsconfig file_
+make sure the entry is a _.ts_ file
