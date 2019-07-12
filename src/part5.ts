@@ -25,13 +25,13 @@ const CSNY = new SuperGroup(
   'Crosby, Stills, Nash and Young',
   'MegaDeath'
 );
-console.log(CSNY.groupName); /*group Name is private */
+// console.log(CSNY.groupName); /*error on Private */
 console.log(CSNY.altName); /*alt Name is public, so no error */
 console.log(CSNY.rockout());
 console.log(CSNY.sayAltName());
 CSNY.altName = 'Just Crosby, Stills, Nash. Screw Neil!';
 console.log(CSNY.sayAltName());
-CSNY.secret = 'Deathly Cow Hearders'; /* ERROR , secret is read only */
+// CSNY.secret = 'Deathly Cow Hearders'; /* ERROR , secret is read only */
 console.log(CSNY.saySecret());
 
 /* PROTECTED vs PRIVATE
@@ -39,7 +39,9 @@ console.log(CSNY.saySecret());
 */
 class BandMember {
   protected name: string;
-  private bandName: string; // This private property will cause an error
+  // private bandName: string; // This private property will cause an error
+  protected bandName: string; // This private property will cause an error
+
   constructor(name: string, bandName: string) {
     this.name = name;
     this.bandName = bandName;
@@ -64,5 +66,5 @@ class Singer extends BandMember {
 
 let davidLeeRoth = new Singer('David Lee Roth', 'Van Halen', 'FrontMan');
 console.log(davidLeeRoth.welcome());
-console.log(davidLeeRoth.name); // error
-console.log(davidLeeRoth.bandName); // error
+// console.log(davidLeeRoth.name); // error
+// console.log(davidLeeRoth.bandName); // error

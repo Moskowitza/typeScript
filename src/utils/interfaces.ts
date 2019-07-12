@@ -1,6 +1,5 @@
-interface Band {
-    name: string;
-    size?: number;
-    members?: string[];
-  }
-  
+export interface Band {
+  name: string;
+  size?: number;
+  members?: string[];
+}
