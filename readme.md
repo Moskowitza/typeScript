@@ -55,8 +55,14 @@ Interfaces are useful when passing objects into functions. We define the shape o
 
 A key part of TS and classes is declaring the properties above your constructor. Other TS rules apply, such in the classes internal methods. Interestingly, we can acces the keyword 'name' within our classes. I assume our scope has changed off the window and we can now use 'name'
 
-#### Modifiers
+#### Modifiers (stand alone file for static modifiers)
 
 We can declare `private` & `public` & `readonly` & `protected` class properties with TS. I have created an error by making a 'private' property in a class that is extended. Play with the modifiers to see how they work.
 
 [Docs](https://www.typescriptlang.org/docs/handbook/classes.html)
+
+## Part Six: Modules
+
+Modules work just like you'd expect as in ECMAscript 2015. no surprises here. I have created a utils folder and moved our Band Interface over. [docs](https://www.typescriptlang.org/docs/handbook/modules.html)
+
+## TypeScript Compiler
