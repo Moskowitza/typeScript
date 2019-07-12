@@ -117,28 +117,12 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"src/part6.ts":[function(require,module,exports) {
-"use strict";
+})({"src/genericExample.ts":[function(require,module,exports) {
+function loggingIdentity(arg) {
+  return arg;
+}
 
-exports.__esModule = true;
-var theRollingStones = {
-  size: 4,
-  members: ['Mick Jagger', 'Keit Richards', 'Charlie Watts', 'Ronnie Wood'],
-  name: 'The Rolling Stones'
-};
-var Seal = {
-  name: 'Seal'
-};
-
-var bandStatsInterface = function bandStatsInterface(bandObj) {
-  var name = bandObj.name,
-      size = bandObj.size,
-      members = bandObj.members;
-  return name + " " + (size ? 'have ' + size : 'has no') + " members" + (members ? ': ' + members.join(', ') : ", it's just " + name);
-};
-
-console.log(bandStatsInterface(theRollingStones));
-console.log(bandStatsInterface(Seal));
+console.log(loggingIdentity(5));
 },{}],"../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -342,5 +326,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/part6.ts"], null)
-//# sourceMappingURL=/part6.68e765b5.js.map
+},{}]},{},["../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/genericExample.ts"], null)
+//# sourceMappingURL=/genericExample.f2efde12.js.map

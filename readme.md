@@ -49,7 +49,7 @@ A Union type, represented with `|` ,pipe, gives back the _flexibility_ 🧘‍. 
 
 ## Part Four: Interfaces
 
-Interfaces are useful when passing objects into functions. We define the shape of the interface with the `interface` keyword and define our function parameters to be typed to the interface. This will allow destructring of the properties in our function. There is a great deal more on interfaces when working with Classes. [Docs](https://www.typescriptlang.org/docs/handbook/interfaces.html) I'll explore that more later.
+Interfaces are useful when passing objects into functions. We define the shape of the interface with the `interface` keyword and define our function parameters to be typed to the interface. This will allow destructring of the properties in our function. There is a great deal more on interfaces when working with Classes. [handbook](https://www.typescriptlang.org/docs/handbook/interfaces.html) I'll explore that more later.
 
 ## Part Five: Classes
 
@@ -59,10 +59,27 @@ A key part of TS and classes is declaring the properties above your constructor.
 
 We can declare `private` & `public` & `readonly` & `protected` class properties with TS. I have created an error by making a 'private' property in a class that is extended. Play with the modifiers to see how they work.
 
-[Docs](https://www.typescriptlang.org/docs/handbook/classes.html)
+[handbook](https://www.typescriptlang.org/docs/handbook/classes.html)
 
 ## Part Six: Modules
 
-Modules work just like you'd expect as in ECMAscript 2015. no surprises here. I have created a utils folder and moved our Band Interface over. [docs](https://www.typescriptlang.org/docs/handbook/modules.html)
+Modules work just like you'd expect as in ECMAscript 2015. no surprises here. I have created a utils folder and moved our Band Interface over. [handbook](https://www.typescriptlang.org/docs/handbook/modules.html)
+
+## GenericTypes
+
+For the instance we want a function to return the same type as it is given, we have Generic types. Consider the case of REACT where we pass props and we want the component to render the props.
+
+## Classes and Interfaces
+
+We can create a class from an interface. VScode will help us define the class if you look for the hover over. Based on DuckTyping we can set values directly.
+see: `classyInterfaces.ts`
 
 ## TypeScript Compiler
+
+install typescript locally
+`npm install --save-dev typescript` _make sure your package name is not also 'typescript'_
+you can run tsc from a package.json script
+"tsc": "tsc"
+You can use the typescript compiler instead of parcel. This will create new javascript files in your src directory.
+
+TODO: I'm not sure how to handle the module imports, tsc did not handle this out of the box and there appear to be many options in the handbook.
