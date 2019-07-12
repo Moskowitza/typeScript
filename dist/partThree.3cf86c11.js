@@ -117,43 +117,21 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"index.ts":[function(require,module,exports) {
-console.log('connected'); // Basic Types
+})({"partThree.ts":[function(require,module,exports) {
+// Implicit Types. rockstar is implied to be a string
+var rockstar = 'David Bowie';
+rockstar = 55;
+/*We have an error, but 55 appears on the page */
 
-var isAuthed = false;
-var firstName = 'aaron';
-var coolness = 99.9;
-var list = [0.3, 4.5, 6, 8];
-var cat1 = ['Toki', 99];
-var dog = ['Blue', false, ['Walks', 'Eating']];
-var Pet;
+document.getElementById('rockstar').textContent = rockstar;
+var musician = rockstar;
+musician = 99;
+/*We have an error, but this passes */
 
-(function (Pet) {
-  Pet[Pet["Cat"] = 0] = "Cat";
-  Pet[Pet["Dog"] = 1] = "Dog";
-  Pet[Pet["Mouse"] = 2] = "Mouse";
-})(Pet || (Pet = {}));
+musician = 'Freddy Mercury';
+/*And this passes */
 
-var pet = Pet.Cat;
-document.getElementById('msg').textContent = "My pet " + Pet[pet] + " is named " + cat1[0] + " and scores " + cat1[1] + " on the coolness scale"; //Typescript Functions
-
-var sayHello = function sayHello(word) {
-  console.log("Hello " + word);
-}; // Function with default value
-
-
-var sayGoodNight = function sayGoodNight(word) {
-  if (word === void 0) {
-    word = 'Moon';
-  }
-
-  console.log("Good Night " + word);
-};
-
-sayHello('Daisy');
-sayGoodNight();
-sayGoodNight('Fire Place');
-console.log('David Bowie Says:');
+document.getElementById('musician').textContent = musician;
 },{}],"../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -357,5 +335,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.ts"], null)
-//# sourceMappingURL=/typeScript.77de5100.js.map
+},{}]},{},["../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","partThree.ts"], null)
+//# sourceMappingURL=/partThree.3cf86c11.js.map

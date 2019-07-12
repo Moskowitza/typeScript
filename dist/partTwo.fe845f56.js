@@ -117,43 +117,19 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"index.ts":[function(require,module,exports) {
-console.log('connected'); // Basic Types
-
-var isAuthed = false;
-var firstName = 'aaron';
-var coolness = 99.9;
-var list = [0.3, 4.5, 6, 8];
-var cat1 = ['Toki', 99];
-var dog = ['Blue', false, ['Walks', 'Eating']];
-var Pet;
-
-(function (Pet) {
-  Pet[Pet["Cat"] = 0] = "Cat";
-  Pet[Pet["Dog"] = 1] = "Dog";
-  Pet[Pet["Mouse"] = 2] = "Mouse";
-})(Pet || (Pet = {}));
-
-var pet = Pet.Cat;
-document.getElementById('msg').textContent = "My pet " + Pet[pet] + " is named " + cat1[0] + " and scores " + cat1[1] + " on the coolness scale"; //Typescript Functions
-
-var sayHello = function sayHello(word) {
-  console.log("Hello " + word);
-}; // Function with default value
-
-
-var sayGoodNight = function sayGoodNight(word) {
-  if (word === void 0) {
-    word = 'Moon';
+})({"partTwo.ts":[function(require,module,exports) {
+// the Question Mark checks for optional params
+var rebelRebel = function rebelRebel(gender) {
+  if (gender) {
+    gender = gender.toLowerCase();
   }
 
-  console.log("Good Night " + word);
+  if (gender && gender == 'boy' || gender && gender == 'girl') return 'Not a rebel!';
+  return 'Rebel Rebel!';
 };
 
-sayHello('Daisy');
-sayGoodNight();
-sayGoodNight('Fire Place');
-console.log('David Bowie Says:');
+console.log(rebelRebel('BOY'));
+console.log(rebelRebel());
 },{}],"../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -357,5 +333,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.ts"], null)
-//# sourceMappingURL=/typeScript.77de5100.js.map
+},{}]},{},["../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","partTwo.ts"], null)
+//# sourceMappingURL=/partTwo.fe845f56.js.map

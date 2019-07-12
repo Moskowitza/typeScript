@@ -117,43 +117,41 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"index.ts":[function(require,module,exports) {
-console.log('connected'); // Basic Types
-
-var isAuthed = false;
-var firstName = 'aaron';
-var coolness = 99.9;
-var list = [0.3, 4.5, 6, 8];
-var cat1 = ['Toki', 99];
-var dog = ['Blue', false, ['Walks', 'Eating']];
-var Pet;
-
-(function (Pet) {
-  Pet[Pet["Cat"] = 0] = "Cat";
-  Pet[Pet["Dog"] = 1] = "Dog";
-  Pet[Pet["Mouse"] = 2] = "Mouse";
-})(Pet || (Pet = {}));
-
-var pet = Pet.Cat;
-document.getElementById('msg').textContent = "My pet " + Pet[pet] + " is named " + cat1[0] + " and scores " + cat1[1] + " on the coolness scale"; //Typescript Functions
-
-var sayHello = function sayHello(word) {
-  console.log("Hello " + word);
-}; // Function with default value
-
-
-var sayGoodNight = function sayGoodNight(word) {
+})({"partOne.ts":[function(require,module,exports) {
+var diamondDogs = function diamondDogs(word) {
   if (word === void 0) {
-    word = 'Moon';
+    word = "rock'n'roll";
   }
 
-  console.log("Good Night " + word);
+  word = word.toLocaleLowerCase();
+
+  if (word == 'genocide') {
+    return "As they pulled you out of the oxygen tent\n      You asked for the latest party\n      With your silicone hump and your ten inch stump\n      Dressed like a priest you was\n      Tod Browning's Freak you was\n      Crawling down the alley on your hands and knee\n      I'm sure you're not protected, for it's plain to see\n      The Diamond Dogs are poachers and they hide behind trees\n      Hunt you to the ground they will, mannequins with kill appeal";
+  }
+
+  return "This ain't " + word;
 };
 
-sayHello('Daisy');
-sayGoodNight();
-sayGoodNight('Fire Place');
-console.log('David Bowie Says:');
+console.log(diamondDogs());
+console.log(diamondDogs('pizza'));
+console.log(diamondDogs('Genocide')); // we can define params AND output BUT you must return a value
+//rest parameters
+
+var artist = function artist(bowie) {
+  var everoneElse = [];
+
+  for (var _i = 1; _i < arguments.length; _i++) {
+    everoneElse[_i - 1] = arguments[_i];
+  }
+
+  if (!bowie) return "No Bowie";
+  return bowie + " and " + everoneElse.join(', ');
+};
+
+console.log(artist());
+console.log(artist('David Bowie'));
+console.log(artist('', 'Elton John', 'Lou Reed'));
+console.log(artist('Ziggy Stardust', 'Elvis Costello', 'Iggy Pop'));
 },{}],"../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -357,5 +355,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.ts"], null)
-//# sourceMappingURL=/typeScript.77de5100.js.map
+},{}]},{},["../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","partOne.ts"], null)
+//# sourceMappingURL=/partOne.c7c50bf9.js.map

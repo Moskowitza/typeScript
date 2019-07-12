@@ -16,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/Moskowitza/typeScript/issues"
   },
-  "homepage": "https://github.com/Moskowitza/typeScript#readme"
+  "homepage": "https://github.com/Moskowitza/typeScript#readme",
+  "devDependencies": {}
 }
