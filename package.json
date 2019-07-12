@@ -17,5 +17,7 @@
     "url": "https://github.com/Moskowitza/typeScript/issues"
   },
   "homepage": "https://github.com/Moskowitza/typeScript#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "typescript": "^3.5.3"
+  }
 }
